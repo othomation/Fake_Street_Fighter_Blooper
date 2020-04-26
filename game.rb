@@ -2,7 +2,7 @@ class Game < Gosu::Window
 
   def intialize
     super
-    self.caption = $settings["w_caption"] # Define the window's title. Refer to 'settings.rb'
+    self.caption = $settings['w_caption'] # Define the window's title. Refer to 'settings.rb'
 
     p $settings.to_s
     p $settings
