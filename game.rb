@@ -1,5 +1,4 @@
 class Game < Gosu::Window
-  attr_accessor :x, :y, :sora, :justice, :dir
   def initialize(filename, map, x, y, z)
     super
     self.caption = $settings['w_caption'] # Define the window's title. Refer to 'settings.rb'
@@ -7,8 +6,10 @@ class Game < Gosu::Window
     @font_debugging = Gosu::Font.new(self, Gosu::default_font_name, 32)
     ## End of fonts and stuff for visual debugging ##
     @map = Map.new("assets/map.txt") # its the filename arg in map.rb's initialize
-
-
+  #  @sora.draw
+  p @sora
+  p @fighter 
+  #  @sora.draw
   end
 
   def update
@@ -26,8 +27,8 @@ class Game < Gosu::Window
                                     Gosu::Color::YELLOW )
     ## End of Debug related ##
     @map.draw # Draw the map ! That's it. I love commenting.
-    @sora.draw
-    @justice.draw
+  #  @sora.draw
+  #  @justice.draw
   end
 
   private

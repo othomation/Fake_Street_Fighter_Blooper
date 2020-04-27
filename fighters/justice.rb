@@ -1,11 +1,9 @@
-require File.join(File.dirname(__FILE__), 'fighter.rb')
-class Justice < Fighter
+class Justice < Fighters
   attr_reader  :x, :y, :dir, :vy, :map, :sora, :justice
 
   def initialize(filename, map, x, y, z)
     super
     @dir = :right
-    @x, @y = x, y
     @x = - $settings['w_width'] + 100
     @y = $settings['w_height'] - 70
     @@name = "@justice"

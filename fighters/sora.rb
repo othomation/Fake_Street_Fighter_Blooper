@@ -1,22 +1,23 @@
-require File.join(File.dirname(__FILE__), 'fighter.rb')
-class Sora < Fighter
+class Sora < Fighters
   attr_reader :x, :y, :dir, :vy, :map, :sora, :justice
 
-  def initialize(filename, map, x, y, z)
-    super
-    @dir = :right
-    @x, @y = x, y
+  def initialize(name, filename, map, x, y, z)
+    super("Sora", "assets/img/char/one.png", @map, @x, @y ,$zorder['char'])
+    @dir = :left
     @x = - $settings['w_width'] + 100
     @y = $settings['w_height'] - 70
-    @@name = "Sora"
-    @sora = Fighter.new("assets/img/char/one.png", @map, @x, @y ,$zorder['char'])
-    p
+    @sora = Fighter.new
+    @sora.draw
+    p "test"
+  end
+  def name
+    @name = "sora1"
+    p @name
   end
 
   def update
     p "test"
-    button_down?(id)
-    @sora.update(move_x)
+    p @sora.to_s
   end
 
   def draw
