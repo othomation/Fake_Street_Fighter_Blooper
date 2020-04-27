@@ -2,11 +2,11 @@ class Sora < Fighters
   attr_reader :x, :y, :dir, :vy, :map,
 
   def initialize(filename, map, x, y, z)
-    super(  "one.png",
+    super(  "./assets/img/char/one.png",
             @map,
             100,
             500 ,
-            $zorder['char'])
+            4)
     @dir = :left
     p "test"
   end

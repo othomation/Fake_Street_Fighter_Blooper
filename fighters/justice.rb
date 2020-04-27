@@ -1,24 +1,20 @@
 class Justice < Fighters
-  attr_reader  :x, :y, :dir, :vy, :map, :sora, :justice
+  attr_reader :x, :y, :dir, :vy, :map,
 
   def initialize(filename, map, x, y, z)
-    super
+    super(  "./assets/img/char/two.png",
+            @map,
+            600,
+            500 ,
+            $zorder['char'])
     @dir = :right
-    @x = - $settings['w_width'] + 100
-    @y = $settings['w_height'] - 70
-    @@name = "@justice"
-    @@justice = Fighter.new("assets/img/char/two.png", @map, @x, @y ,$zorder['char'])
-    p
+    p "test"
   end
 
   def update
-    p "test"
-    button_down?(id)
-    @@justice.update(move_x)
   end
 
   def draw
-    @@justice.draw
   end
 
   private

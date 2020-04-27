@@ -7,10 +7,11 @@ class Fighters
     @dir = dir # Initialize fighter's direction to right. This is also important beaucause my sprite are direction based. Just watch one.png or two.png on the assets/img/char directory.
     @vy = 0
     @map = map
-    @fighters_sprites = Gosu::Image.load_tiles(filename, 60, 120)
+    @fighters_sprites = Gosu::Image.load_tiles(filename, 60, 120, nil, nil)
     # fighter_sprites return a four element array with each of the sprite of the tileset we'll specify in each fighter class object
     @fighters = @fighters_sprites[0] # return the 'standing' animation (which is the first)
     p "test"
+
   end # initialize end
 
   def update(move_x)
