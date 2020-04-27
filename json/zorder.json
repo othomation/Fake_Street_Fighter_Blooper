@@ -1,0 +1,6 @@
+{
+  "background" : 0,
+  "ground" : 1,
+  "char" : 2,
+  "ui" : 3
+}
