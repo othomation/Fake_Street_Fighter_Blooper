@@ -7,6 +7,12 @@ class Debug < Gosu::Window
   def update
   end
 
+#this do not work sad sad sad
+#this do not work sad sad sad
+#this do not work sad sad sad
+#this do not work sad sad sad
+#this do not work sad sad sad
+#this do not work sad sad sad 
   def draw
 @font_debugging.draw_text("Debug",
                                 ($settings['w_width'].to_i/2)-38.75, #Set it to middle of screen. 38.75 is half the Debug text. I got this with .text_width
