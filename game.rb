@@ -7,13 +7,11 @@ class Game < Gosu::Window
     ## End of fonts and stuff for visual debugging ##
     @map = Map.new("assets/map.txt") # its the filename arg in map.rb's initialize
   #  @sora.draw
-  p @sora
-  p @fighter 
-  #  @sora.draw
+    @sora = Sora.new
+    p @sora
   end
 
   def update
-
   end
 
   def draw
@@ -27,7 +25,7 @@ class Game < Gosu::Window
                                     Gosu::Color::YELLOW )
     ## End of Debug related ##
     @map.draw # Draw the map ! That's it. I love commenting.
-  #  @sora.draw
+    @sora.draw
   #  @justice.draw
   end
 

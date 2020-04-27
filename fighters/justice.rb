@@ -30,7 +30,7 @@ class Justice < Fighters
     when $justice_right
       move_x += 5
     when $justice_jump
-      @justice.try_to_jump
+      self.try_to_jump
     else
       super
     end

@@ -1,6 +1,6 @@
 class Map
 
-  attr_reader :width, :height #make those value accessible !
+  attr_reader :width, :height, :map #make those value accessible !
 
   def initialize(filename)
     # Grounds tileset information :

@@ -10,8 +10,6 @@ class Fighters
     @fighters_sprites = Gosu::Image.load_tiles(filename, 60, 120)
     # fighter_sprites return a four element array with each of the sprite of the tileset we'll specify in each fighter class object
     @fighters = @fighters_sprites[0] # return the 'standing' animation (which is the first)
-    @fighters = Fighters.new
-    @fighters.draw
     p "test"
   end # initialize end
 
@@ -63,7 +61,7 @@ class Fighters
       offs_x = @fighters.width/2
       factor = -1.0
     end # case @dir end
-    # @fighter.draw
+
      @fighters.draw(@x + offs_x, @y - (@fighters.width/2), $zorder['char'], factor, 1.0)
   end # draw method end
 
